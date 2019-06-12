@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/libs/jquery.js"></script>
+    <script src="/libs/jquery-3.3.1.min.js"></script>
+    <script src="/libs/flexible.js"></script>
+    <script src="/libs/vue.js"></script>
+    <script src="/libs/echarts.common.min.js"></script>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="./../static/common.css"> -->
+    <link rel="stylesheet" href="/index/index.css">
+    <title>hongli--个人主页</title>
+</head>
+
+<body>
+    <div class="main-wrapper" id="wrapper">
+        <div class="head-box">
+            <div class="logo-img">
+                <img src="/img/github.svg" alt="logo">
+            </div>
+            <ul class="nav-list">
+                <li class="nav-li" :class="{'active-page':currentPage==1}" @click="menuClick(1)">Introduction</li>
+                <li class="nav-li" :class="{'active-page':currentPage==2}" @click="menuClick(2)">Experience</li>
+                <li class="nav-li" :class="{'active-page':currentPage==3}" @click="menuClick(3)">Project</li>
+                <li class="nav-li" :class="{'active-page':currentPage==4}" @click="menuClick(4)">Skill</li>
+            </ul>
+        </div>
+        <div class="page-box">
+            <section class="page page1" v-if="currentPage==1">
+                <div class="my-msg">
+                    <div class="my-msg-box">
+                        <div class="my-info-box">
+                            <img src="/img/touxiang.jpg" alt="" class="my-pic">
+                            <div class="my-info">
+                                <h1>王红丽<img src="/img/women.png" alt="女"></h1>
+                                <h2>web前端开发工程师</h2>
+                                <div>
+                                    <span class="my-call"><strong>Email:</strong>1711768357@qq.com</span>
+                                    <br>
+                                    <span class="my-call"><strong>Tel:</strong>18829289491</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-introduce">
+                            <p>
+                                2013.09 - 2017.07就读于西安邮电大学电子科学与技术专业，学历：本科。 2017.3开始进入公司实习，毕业后加入步步高教育电子公司
+                            </p>
+                        </div>
+                        <button type="submit" class="btn btn-block js-toggler-target" aria-label="Unfollow this person" title="Unfollow gaearon">
+                                <a href="https://github.com/whl01135020">follow</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="my-msg">
+                    <div class="my-msg-box">
+                        <div class="my-info-box">
+                            <img src="https://avatars3.githubusercontent.com/u/20772117?s=220&v=4" alt="" class="my-pic">
+                            <div class="my-info">
+                                <h2><a href="https://github.com/whl01135020">my github</a></h2>
+                                <p>Big wang</p>
+                                <div>
+                                    Its not until you fall that you fly When your dreams come alive you’re unstoppable <br>Take a shot, chase the sun, find the beautiful
+                                </div>
+                            </div>
+                        </div>
+                        <div class="a-link-box">
+                            <div class="a-link">
+                                <div>
+                                    <img src="/img/wcx.svg" alt="" srcset="" class="pjt-pic">
+                                    <a href="https://github.com/whl01135020/echarts-wx-project">微信小程序组件使用+echarts</a>
+                                </div>
+                                <div class="star">
+                                    10k<img src="/img/watch.png" alt="">
+                                </div>
+
+                            </div>
+                            <div class="a-link">
+                                <div>
+                                    <img src="/img/add-work.png" alt="" srcset="" class="pjt-pic">
+                                    <a href="http://www.hongliwang.xyz/jiaban/index.html">周末加班统计h5页面</a>
+                                </div>
+                                <div class="star">
+                                    1.5k<img src="/img/watch.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="my-msg">
+                    <div class="my-msg-box">
+                        <div class="my-info-box">
+                            <img src="/img/csdn.svg" alt="" class="my-pic">
+                            <div class="my-info">
+                                <h2><a href="https://blog.csdn.net/whl036">我的CSDN博客</a></h2>
+                                <p>2019年开始我的博客之路</p>
+                                <div>
+                                    虽然才开始用博客不到半年,但是梦想,任何时候开始都不晚,好习惯就得从现在开始养成！
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="a-link-box">
+                            <div class="a-link">
+                                <div>
+                                    <img src="/img/map.png" alt="" srcset="" class="pjt-pic">
+                                    <a href=" https://mp.csdn.net/postedit/88065202">echarts实现地图数据展示</a>
+                                </div>
+                                <div class="star">
+                                    124<img src="/img/watch.png" alt="">
+                                </div>
+
+                            </div>
+                            <div class="a-link">
+                                <div>
+                                    <img src="/img/js.png" alt="" srcset="" class="pjt-pic">
+                                    <a href=" https://mp.csdn.net/postedit/88064665">javaScript数组去重超级好用的方法</a>
+                                </div>
+                                <div class="star">
+                                    158<img src="/img/watch.png" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page" v-if="currentPage==2">
+                <div class="work-box">
+                    <div class="work-item">
+                        <div class="title">
+                            <img src="/img/xh.jpg" alt="" srcset="" class="xy">
+                            <a href="http://www.xiyou.edu.cn/">西安邮电大学</a>
+                        </div>
+                        <div class="content">
+                            电子工程学院电子科学与技术专业,本科学历
+                        </div>
+                        <div class="footer">
+                            <img src="/img/date.png" alt="" srcset="">2013-09-2017-07
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="title">
+                            <img src="https://static.eebbk.com/static/pc/public/img/logo_f204ba7.png" alt="" class="bbk">
+                            <a href="https://www.eebbk.com/html/pc/index/index.html">步步高教育电子有限公司</a>
+                        </div>
+                        <div class="content">
+                            <b>互联网技术部</b>&nbsp;&nbsp;大数据科室 &nbsp;&nbsp;实习
+                            <br>
+                            岗位:web前端开发工程师
+                        </div>
+                        <div class="footer">
+                            <img src="/img/date.png" alt="" srcset="">2017-03-2017-04
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="title">
+                            <img src="https://static.okii.com/static/pc/public/img/logo_c953501.png" alt="" class="bbk">
+                            <a href="https://www.eebbk.com/html/pc/index/index.html">小天才有限公司</a>
+                        </div>
+                        <div class="content">
+                            <b>互联网技术部</b>&nbsp;&nbsp;大数据科室 
+                            <br>
+                            岗位:web前端开发工程师
+                        </div>
+                        <div class="footer">
+                            <img src="/img/date.png" alt="" srcset="">2017-07-至今
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page" v-if="currentPage==3">
+                <div class="my-project">
+                    <div class="pjt">
+                        <div class="web-page">
+                            <div class="page-content">
+                                <div class="title">
+                                    <img src="/img/xm.png" alt="" srcset="">
+                                    <a href="https://www.imoo.com/id/h5/index/index.html">小天才印尼官网首页</a>
+                                </div>
+                                <div class="content">
+                                    A Watch That Can Make Calls imoo Watch Phone
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-page">
+                            <div class="page-content">
+                                <div class="title">
+                                    <img src="/img/xm.png" alt="" srcset="">
+                                    <a href="https://www.imoo.com/id/h5/y1/index.html">小天才印尼官网y1产品页</a>
+                                </div>
+                                <div class="content">
+                                    A Watch That Can Make Calls imoo Watch Y1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-page">
+                            <div class="page-content">
+                                <div class="title">
+                                    <img src="/img/xm.png" alt="" srcset="">
+                                    <a href="https://github.com/whl01135020/h5-overtime-at-weekend">周末加班统计系统</a>
+                                </div>
+                                <div class="content">
+                                    h5页面上通过柱状图+折线图+饼图实现数据直观展示
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-page">
+                            <div class="page-content">
+                                <div class="title">
+                                    <img src="/img/xm.png" alt="" srcset="">
+                                    <a href=" https://github.com/whl01135020/echarts-wx-project">小程序+echarts的小程序项目</a>
+                                </div>
+                                <div class="content">
+                                    小程序 + echarts + tab实现产品数据的直观展示
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-page">
+                            <div class="page-content">
+                                <div class="title">
+                                    <img src="/img/xm.png" alt="" srcset="">
+                                    <a href="https://actcdn.eebbk.com/wx-spread-course/children-day/index.html">微信送课程-六一活动</a>
+                                </div>
+                                <div class="content">
+                                   h5页面展示的微信送课程系列之六一活动
+                                </div>
+                            </div>
+                        </div>
+                        <div class="web-page">
+                            <div class="page-content">
+                                <div class="title">
+                                    <img src="/img/xm.png" alt="" srcset="">
+                                    <a href="https://actcdn.eebbk.com/wx-spread-course/k5/">微信送课程-家教机k5</a>
+                                </div>
+                                <div class="content">
+                                    h5页面展示的微信送课程系列之家教机k5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page page4" v-show="currentPage==4">
+                <div id="echart" class="echart" >
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="/index/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://172.28.195.99:8132/livereload.js"></script></body>
+
+</html>

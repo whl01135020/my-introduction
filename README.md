@@ -6,4 +6,4 @@
 ----
 >> 项目中用到了vue, jq, js, bootstrap,echarts等 
 
-![Image text](https://github.com/whl01135020/my-introduction/blob/master/img/jt.png)
+

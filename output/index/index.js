@@ -13,8 +13,8 @@ var wrapper = new Vue({
         loadChart(){
             echarts.dispose($('#echart')[0]);
             let barChartIdInstance = echarts.init($('#echart')[0]);
-            let topData = [90,90,85,95,60,50,95,93];
-            let topXa = ['javaScript','jquery','vue','echarts','webpack','node','html5','css3'];
+            let topData = [90,90,85,95,95,93];
+            let topXa = ['javaScript','jquery','vue','echarts','html5','css3'];
             let option = {
                 title: {
                     text: '我的技能',
